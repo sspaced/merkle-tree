@@ -10,7 +10,7 @@ int main(void)
 	node = hash_node("test", "test");
 	if (node)
 	{
-		printf("Hash created successfully\n");
+		diplay_hash(node->hash);
 		free(node);
 	}
 	return (0);

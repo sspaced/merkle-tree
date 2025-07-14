@@ -3,6 +3,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include <openssl/sha.h>
 #include "types.h"
 
@@ -14,5 +15,8 @@ merkle_node	*hash_node(char *left, char *right);
 
 // srcs/general_utils.c
 char *ft_strcat(char *a, char *b);
+
+// srscs/display.c
+void diplay_hash(unsigned char hash[SHA256_DIGEST_LENGTH]);
 
 #endif
