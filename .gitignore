@@ -1,0 +1,94 @@
+# C/C++ build artifacts
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+merkle-tree
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Build directories
+obj/
+build/
+dist/
+bin/
+
+# Core dumps
+core
+core.*
+
+# Temporary files
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Compilation database
+compile_commands.json
+
+# Static analysis
+*.gcno
+*.gcda
+*.gcov
+
+# Valgrind
+*.valgrind
+
+# Archives
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+
+# Logs
+*.log
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+!Makefile
+
+# Autotools
+autom4te.cache/
+config.h
+config.log
+config.status
+configure
+Makefile.in
+
+# Ignore everything in tmp directories
+tmp/
+temp/ 
