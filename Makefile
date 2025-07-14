@@ -3,7 +3,8 @@
 # Compiler and flags
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -std=c99 -pedantic
-INCLUDES = -Iheaders
+INCLUDES = -Iheaders -I/opt/homebrew/opt/openssl@3/include
+LDFLAGS = -L/opt/homebrew/opt/openssl@3/lib -lssl -lcrypto
 
 # Directories
 SRCDIR = srcs
@@ -11,10 +12,10 @@ HEADERDIR = headers
 OBJDIR = obj
 
 # Files
-SRCFILES = main.c
+SRCFILES = main.c $(wildcard $(SRCDIR)/*.c)
 SOURCES = $(SRCFILES)
 OBJECTS = $(SOURCES:%.c=$(OBJDIR)/%.o)
-HEADERS = $(HEADERDIR)/types.h
+HEADERS = $(wildcard $(HEADERDIR)/*.h)
 
 # Target executable
 NAME = merkle-tree
@@ -25,6 +26,7 @@ all: $(NAME)
 # Create object directory if it doesn't exist
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
+	mkdir -p $(OBJDIR)/$(SRCDIR)
 
 # Rule to compile object files
 $(OBJDIR)/%.o: %.c $(HEADERS) | $(OBJDIR)
@@ -32,7 +34,7 @@ $(OBJDIR)/%.o: %.c $(HEADERS) | $(OBJDIR)
 
 # Rule to create the executable
 $(NAME): $(OBJECTS)
-	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME) $(LDFLAGS)
 
 # Clean object files
 clean:
@@ -54,4 +56,4 @@ debug: CFLAGS += -g -DDEBUG
 debug: $(NAME)
 
 # Phony targets
-.PHONY: all clean fclean re run debug 
+.PHONY: all clean fclean re run debug

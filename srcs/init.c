@@ -1,4 +1,4 @@
-#include "../headers/types.h"
+#include "../headers/header.h"
 
 void init_merkle_node(merkle_node *node)
 {
