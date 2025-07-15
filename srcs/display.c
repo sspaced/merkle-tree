@@ -1,6 +1,6 @@
 #include "../headers/header.h"
 
-void diplay_hash(unsigned char hash[SHA256_DIGEST_LENGTH])
+void display_hash(unsigned char hash[SHA256_DIGEST_LENGTH])
 {
 	int i;
 	i = 0;

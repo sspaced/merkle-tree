@@ -25,9 +25,9 @@ int main(void)
 	node_3 = hash_node(node_1->hash, node_2->hash);
 	if (node_1 && node_2)
 	{
-		diplay_hash(node_1->hash);
-		diplay_hash(node_2->hash);
-		diplay_hash(node_3->hash);
+		display_hash(node_1->hash);
+		display_hash(node_2->hash);
+		display_hash(node_3->hash);
 		free(node_1);
 		free(node_2);
 		free(node_3);

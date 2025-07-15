@@ -17,6 +17,6 @@ merkle_node	*hash_node(unsigned char *left, unsigned char *right);
 char *ft_strcat(char *a, char *b);
 
 // srscs/display.c
-void diplay_hash(unsigned char hash[SHA256_DIGEST_LENGTH]);
+void display_hash(unsigned char hash[SHA256_DIGEST_LENGTH]);
 
 #endif
