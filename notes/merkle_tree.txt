@@ -1,0 +1,12 @@
+		[ racine ]
+           /  \
+      [ nœud_1 ] [ nœud_2 ]
+        / \       / \
+   [ feuille_1 ] [ feuille_2 ] ...
+
+   Racine = hash(noeud_1, noeud_2)
+   noeud_1 = hash(feuille_1, feuille_2)
+   feuille_1 = hash(data)
+
+   data = transaction, signature etc
+

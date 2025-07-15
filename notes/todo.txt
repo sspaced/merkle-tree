@@ -1,0 +1,4 @@
+[ ] Types pour gerer dynamiquement larbre
+[ ] Fonction d'ajout (re caclcule de la root)
+[ ] Fonction de generatin de preuve de Merkle
+[ ] Fonction de test si un hash existe dans une racine
