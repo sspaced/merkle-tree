@@ -11,7 +11,7 @@
 void init_merkle_node(merkle_node *node);
 
 // srcs/crypto_utils.c
-merkle_node	*hash_node(char *left, char *right);
+merkle_node	*hash_node(unsigned char *left, unsigned char *right);
 
 // srcs/general_utils.c
 char *ft_strcat(char *a, char *b);
